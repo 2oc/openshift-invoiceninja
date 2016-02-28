@@ -4,7 +4,12 @@ oc new-project mol-invoiceninja \
     --description="MoL InvoiceNinja" \
     --display-name="MoL InvoiceNinja"
 
+echo "storage"
+oc create -f Gluster-Service.yaml
+oc create -f Gluster-Endpoints.yaml
+
 echo "pgAdmin"
+oc create -f invoiceninja/PersistentVolumeClaim.yaml 
 oc create -f invoiceninja/BuildConfig.yaml
 oc create -f invoiceninja/ImageStream.yaml
 oc create -f invoiceninja/DeploymentConfig.yaml
