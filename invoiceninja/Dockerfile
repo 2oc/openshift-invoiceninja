@@ -1,11 +1,5 @@
 FROM weepee-registry/php-webserver
 
-# Add clean wordpress
-ADD app /app
-
-# database config
-ADD config.inc.php /app/conf/config.inc.php
-
 # Entrypoint
 ADD scripts/run.sh /scripts/run.sh
 
