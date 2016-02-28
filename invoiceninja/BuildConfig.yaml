@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: invoiceninja
+  name: invoiceninja
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: invoiceninja:latest
+  resources: {}
+  source:
+    git:
+      ref: master
+      uri: https://github.com/weepee-org/openshift-invoiceninja.git
+    contextDir: invoiceninja/
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: php-webserver:latest
+        namespace: weepee-registry
+    type: Docker
