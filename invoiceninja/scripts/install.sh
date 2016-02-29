@@ -2,8 +2,8 @@
 
 cd /tmp
 
-curl -o invoiceninja.tar.gz -SL https://github.com/hillelcoren/invoice-ninja/arc
-hive/v2.4.8.tar.gz
-tar -xzf invoiceninja.tar.gz
-mv invoiceninja-2.4.8/* /app/
-composer install --working-dir /app -o --no-dev --no-interaction  
+wget https://dl.dropboxusercontent.com/u/2909575/ninja-v2.5.0.3.zip
+cd /app
+unzip /tmp/ninja-v2.5.0.3.zip
+
+php artisan optimize
