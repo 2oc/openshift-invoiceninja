@@ -9,4 +9,4 @@ ADD scripts/install.sh /tmp/install.sh
 RUN chmod -R 755 /scripts && chmod a+rwx /app
 
 # Modify root dir
-sed -i 's/app/app\/public/' /etc/apache2/httpd.conf
+RUN sed -i 's/app/app\/public/' /etc/apache2/httpd.conf
