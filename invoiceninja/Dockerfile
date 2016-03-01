@@ -1,4 +1,4 @@
-FROM weepee-registry/php-webserver
+FROM weepee-registry/php7-webserver
 
 # Entrypoint
 ADD scripts/run.sh /scripts/run.sh

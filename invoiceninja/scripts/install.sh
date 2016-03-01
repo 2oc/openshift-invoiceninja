@@ -7,3 +7,5 @@ cd /app
 unzip /tmp/ninja-v2.5.0.3.zip
 
 php artisan optimize
+
+chmod -R 755 /app/storage
