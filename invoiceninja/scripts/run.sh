@@ -2,6 +2,8 @@
 
 STAMP=$(date)
 
+echo "oc:x:`id -u`:0:oc:/:/sbin/nologin" >> /etc/passwd
+
 echo "[${STAMP}] Starting hourly ..."
 #/app/hourly/invoiceninja &
 
