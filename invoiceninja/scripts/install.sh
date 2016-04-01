@@ -1,10 +1,11 @@
 #!/bin/bash
 
 mkdir /app/tmp
-wget https://dl.dropboxusercontent.com/u/2909575/ninja-v2.5.0.3.zip
+cd /app/tmp
+curl -O https://dl.dropboxusercontent.com/u/2909575/ninja-v2.5.1.1.zip
 
 cd /app/tmp
-unzip ninja-v2.5.0.3.zip
+unzip ninja-v2.5.1.1.zip
 
 cp -vfrp ninja/* /app/
 
