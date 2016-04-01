@@ -11,5 +11,5 @@ ADD scripts/install.sh /scripts/install.sh
 # Remove and mount attached storage
 RUN chmod -R 755 /scripts && chmod a+rwx /app
 
-# Modify root dir
+# Modify root dir (after install)
 RUN sed -i 's/app/app\/public/' /etc/apache2/httpd.conf
