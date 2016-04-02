@@ -1,7 +1,7 @@
 FROM weepee-registry/php7-webserver
 
 # php ini
-COPY php.ini /etc/php/php.ini
+COPY php.ini /etc/php7/php.ini
 
 # Entrypoint
 ADD scripts/run.sh /scripts/run.sh
